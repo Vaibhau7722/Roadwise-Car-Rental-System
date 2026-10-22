@@ -1,0 +1,2 @@
+package com.carrental.exception;
+public class BookingNotFoundException extends RuntimeException { public BookingNotFoundException(String message){super(message);} }

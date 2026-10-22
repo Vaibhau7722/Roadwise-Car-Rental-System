@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "https://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+  <session-factory>
+
+    <!-- Database Connection -->
+    <property name="hibernate.connection.driver_class">
+      com.mysql.cj.jdbc.Driver
+    </property>
+
+    <property name="hibernate.connection.url">
+      jdbc:mysql://localhost:3306/car_rental_db
+    </property>
+
+    <property name="hibernate.connection.username">
+      root
+    </property>
+
+    <!-- Replace YOUR_MYSQL_PASSWORD with your actual MySQL password -->
+    <property name="hibernate.connection.password">
+      Vaibhau@@@@
+    </property>
+
+    <!-- Hibernate Configuration -->
+    <property name="hibernate.dialect">
+      org.hibernate.dialect.MySQLDialect
+    </property>
+
+    <property name="hibernate.hbm2ddl.auto">
+      validate
+    </property>
+
+    <property name="hibernate.show_sql">
+      false
+    </property>
+
+    <property name="hibernate.format_sql">
+      false
+    </property>
+
+    <!-- Entity Mappings -->
+    <mapping class="com.carrental.entity.User"/>
+    <mapping class="com.carrental.entity.Customer"/>
+    <mapping class="com.carrental.entity.Car"/>
+    <mapping class="com.carrental.entity.Booking"/>
+    <mapping class="com.carrental.entity.Rental"/>
+    <mapping class="com.carrental.entity.Payment"/>
+    <mapping class="com.carrental.entity.Maintenance"/>
+
+  </session-factory>
+</hibernate-configuration>
